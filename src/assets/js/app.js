@@ -16,8 +16,33 @@ require('foundation-sites');
 
 $(document).foundation();
 
-// $('.title-bar').on('sticky.zf.stuckto:top', function(){
-//   $(this).addClass('shrink');
-// }).on('sticky.zf.unstuckfrom:top', function(){
-//   $(this).removeClass('shrink');
-// })
+
+// START TOP-NAV-DESKTOP PLUGIN
+// ----------------------
+
+// Select the element that you want to listen for
+var element = $('header');
+
+// Select the element that you want to add the class to
+var target = $('.scrollhide-nav');
+
+$(window).scroll(function() {
+  // Get the distance from the top of the window to the element
+  var elementTop = element.offset().top;
+  // Get the height of the element
+  var elementHeight = element.height();
+  // Get the current scroll position of the window
+  var scrollTop = $(window).scrollTop();
+
+  // If the element is not visible (distance from top + height is less than scroll position), remove the class to the target element
+  if (elementTop + elementHeight < scrollTop) {
+    target.removeClass('hidden');
+  } else {
+    // Otherwise, add the class from the target element
+    target.addClass('hidden');
+  }
+});
+
+// END TOP-NAV-DESKTOP PLUGIN
+// ----------------------
+

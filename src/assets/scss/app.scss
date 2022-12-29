@@ -64,43 +64,6 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-.p-20{
-    padding-top:20rem
-  }
+@import 'personal/custom';
 
-  /* Demo Styles */
-
-.title-bar {
-    width: 100%;
-    z-index: 10;
-    transition: height .25s ease;
-    height: 4.2em;
-    background-color: $white;
-  }
-  
-  .title-bar .title-bar-right, 
-  .title-bar .title-bar-left {
-    transition: padding-top .25s ease;
-    padding-top: 1.4em;
-  }
-  .title-bar.shrink {
-    height: 3em;
-  }
-  .title-bar.shrink .title-bar-right, 
-  .title-bar.shrink .title-bar-left {
-    padding-top: 0em;
-  }
-  .title-bar .dropdown.menu li {
-    float: left;
-  }
-  .title-bar .dropdown.menu .is-dropdown-submenu {
-    border: none;
-    background-color: $white;
-  }
-  #root {
-    margin-top: 2em;
-  }
-  .offset{
-    padding-top:3.5em;
-  }
-@import 'components/building-blocks/responsive-nav-social';
+@import 'third-party-imported/font-awesome';
