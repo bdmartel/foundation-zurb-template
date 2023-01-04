@@ -64,6 +64,7 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import 'personal/custom';
 
-@import 'third-party-imported/font-awesome';
+
+@import 'custom/custom';
+@import 'custom/header/static-desktop';

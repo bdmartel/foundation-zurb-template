@@ -123,9 +123,14 @@ let webpackConfig = {
             compact: false
           }
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ]
   },
+  
   devtool: !PRODUCTION && 'source-map'
 }
 
