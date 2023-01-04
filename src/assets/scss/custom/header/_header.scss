@@ -1,0 +1,49 @@
+$scrollhide-nav-transition-speed: 1s;
+
+#static {
+  #logo {
+    img{
+      width: 100%;
+      display:block;
+      height: auto
+    }
+  }
+}
+nav {
+  &.scrollhide-nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    transition: transform $scrollhide-nav-transition-speed
+      cubic-bezier(0.86, 0, 0.07, 1);
+
+    &.hidden {
+      transform: translateY(-100%);
+    }
+    .top-bar {
+      .menu {
+        li {
+          &#logo {
+            width: rem-calc(100);
+          }
+          a {
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  li {
+    a {
+      color: $white;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    &#social {
+      margin: 0 0 0 $global-margin;
+    }
+  }
+}
