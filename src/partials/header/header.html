@@ -1,60 +1,16 @@
-<header>
-  <div id="static">
-    <div class="grid-container">
-      <div class="grid-x grid-padding-y">
-        <div class="cell small-12">
-          <div id="logo">
-            <img src="assets/img/logo.svg">
-          </div>
-        </div>
-        <!-- <div class="cell small-4">
-        <ul class="menu align-center align-middle">
-          ...social previously located here
-        </ul>
-      </div> -->
-      </div>
-      <div class="grid-x grid-padding-y">
-        <div class="cell">
-          <ul class="menu align-center align-middle" id="nav">
-            {{> nav}}
-            {{> social}}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div id="static">
-    <div class="grid-container">
-      <div class="grid-x grid-padding-y grid-padding-x grid-margin-x">
-        <div class="cell small-1 align-left">
-          <div id="logo">
-            <img src="assets/img/logo.svg">
-          </div>
-        </div>
-        <div class="cell small-10 align-center">
-          <nav>
-            <ul class="menu align-middle">
-              {{> nav}}
-              {{> social}}
-            </ul>
-        </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-  </div>
+<header>
   <div id="sticky">
-    <nav class="scrollhide-nav hidden">
+    <nav class="hidden">
       <div class="top-bar">
         <div class="top-bar-left">
           <ul class="menu align-middle">
-            {{> logo}}
-            {{> nav}}
+            {{> logo}} 
           </ul>
         </div>
-        <div class="top-bar-right">
+        <div class="top-bar-right"> 
           <ul class="menu">
+            {{> nav}}
             {{> social}}
           </ul>
         </div>

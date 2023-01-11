@@ -34,7 +34,8 @@ $(document).foundation();
 var element = $('header');
 
 // Select the element that you want to add the class to
-var target = $('.scrollhide-nav');
+var target = $('nav');
+var logo = $('nav #svg-contents');
 
 $(window).scroll(function() {
   // Get the distance from the top of the window to the element
@@ -46,9 +47,12 @@ $(window).scroll(function() {
 
   // If the element is not visible (distance from top + height is less than scroll position), remove the class to the target element
   if (elementTop + elementHeight < scrollTop) {
-    target.removeClass('hidden');
+    target.removeClass('hidden'),
+    logo.removeClass('animate-out').addClass('animate-in');
+
   } else {
     // Otherwise, add the class from the target element
+    logo.removeClass('animate-in').addClass('animate-out'),
     target.addClass('hidden');
   }
 });

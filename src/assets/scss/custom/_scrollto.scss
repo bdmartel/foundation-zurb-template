@@ -1,0 +1,181 @@
+$elSet: 5;
+$elCount: $elSet * 2;
+$orange: #FE9000;
+$orange-light: #FFB732;
+$yellow: #FFDD4A;
+$blue-light: #5ADBFF;
+$blue: #3C6997;
+$bounce: cubic-bezier(0, 0, 0, 1.97);
+$smooth: cubic-bezier(0, 0.72, 0.58, 1);
+
+.bar {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: auto auto 0;
+  width: 300px;
+  max-width: calc(100% - 30px);
+
+  &-input {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+
+    &:checked {
+     .bar-view {
+        @for $n from 1 through $elCount {
+          $r: $elCount - $n + 1;
+          @if $r % 2 == 0 {
+            &:nth-child(#{$r}) {
+              &:after {
+                transition-delay: 0.1s * ($n / 2 - 1);
+              }
+              .bar-button:before {
+                transition-delay: 0.1s * ($n / 2 - 1) + 0.06s;
+              }
+            }
+          }
+        }
+        &:after {
+          transform: scaleX(1);
+        }
+        .bar-button:before {
+          transform: none;
+          opacity: 1;
+        }
+      }
+      @include bar-view {
+        .bar-button:after {
+          opacity: 1;
+          animation: bouncing 0.6s cubic-bezier(0, 0, 0.74, 1.04) infinite;
+        }
+      }
+    }
+  }
+  &-view {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+
+    &:after {
+      height: 2px;
+      top: calc(50% - 1px);
+      transition: transform 0.06s $smooth;
+      transform: scaleX(0);
+      background: $orange-light;
+      transform-origin: left;
+      z-index: 1;
+    }
+    &:not(:last-child) {
+      &:before,
+      &:after {
+        content: '';
+        width: calc(100% - 24px);
+        position: absolute;
+        right: calc(50% + 12px);
+      }
+      &:before {
+        height: 6px;
+        top: calc(50% - 3px);
+        background: $blue;
+      }
+      @for $n from 1 through $elCount {
+        @if $n % 2 == 0 {
+          &:nth-child(#{$n}) {
+            &:after {
+              transition-delay: 0.1s * ($n / 2 - 1);
+            }
+            .bar-button:before {
+              transition-delay: 0.1s * ($n / 2 - 1) + 0.06s;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid $blue;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3), 2px 2px 8px rgba(0, 0, 0, 0.1);
+
+    &:hover:after {
+      transform: none;
+      opacity: 1;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+    }
+    &:before {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, $yellow, $orange);
+      transform: scale(0.3);
+      opacity: 0;
+      transition: {
+        property: transform, opacity;
+        duration: 0.2s;
+        timing-function: $smooth;
+      };
+    }
+    &:after {
+      border: 8px solid transparent;
+      border-top-color: $blue-light;
+      bottom: calc(100% + 10px);
+      left: calc(50% - 8px);
+      transform: translateY(-10px);
+      opacity: 0;
+      transition: {
+        property: transform, opacity;
+        duration: 0.2s;
+        timing-function: $bounce;
+      };
+    }
+  }
+}
+.command {
+  font-family: 'Ubuntu Mono', monospace;
+  letter-spacing: 1px;
+  margin: 30px auto auto;
+  animation: fade 1s ease infinite;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, transparentize($yellow, 0.9), #fff);
+}
+* {
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+@keyframes bouncing {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes fade {
+  50% {
+    opacity: 0.3;
+  }
+};
