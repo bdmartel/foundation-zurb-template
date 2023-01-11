@@ -1,49 +1,88 @@
 $scrollhide-nav-transition-speed: 1s;
 
-#static {
-  #logo {
-    img{
-      width: 100%;
-      display:block;
-      height: auto
+header {
+  #svg-contents {
+    .cls-1 {
+      fill: #ed2024;
+    }
+    .cls-2 {
+      fill: $white;
     }
   }
-}
-nav {
-  &.scrollhide-nav {
+  nav {
     position: fixed;
     right: 0;
     top: 0;
     left: 0;
     transition: transform $scrollhide-nav-transition-speed
       cubic-bezier(0.86, 0, 0.07, 1);
-
     &.hidden {
-      transform: translateY(-100%);
+      // transform: translateY(-100%);
+      background-color: transparent;
     }
     .top-bar {
-      .menu {
-        li {
-          &#logo {
+      .top-bar-left {
+        .menu {
+          #svg-contents {
             width: rem-calc(100);
-          }
-          a {
-            color: $white;
-            text-transform: uppercase;
-            font-weight: 700;
+            &.animate-in {
+              $n: 15;
+              .sitem {
+                opacity: 0;
+                animation: fade-in 100ms ease forwards;
+                @for $x from 2 through $n {
+                  &:nth-child(#{$x}) {
+                    animation-delay: 50ms * ($x - 1);
+                  }
+                }
+              }
+              @keyframes fade-in {
+                to {
+                  opacity: 1;
+                }
+              }
+            }
+            &.animate-out {
+              $n: 15;
+              .sitem {
+                opacity: 1;
+                animation: fade-out 100ms ease forwards;
+                @for $x from 2 through $n {
+                  &:nth-child(#{$x}) {
+                    animation-delay: 50ms * ($x - 1);
+                  }
+                }
+              }
+              @keyframes fade-in {
+                to {
+                  opacity: 1;
+                }
+              }
+              @keyframes fade-out {
+                to {
+                  opacity: 0;
+                }
+              }
+
+              a {
+                color: $white;
+                text-transform: uppercase;
+                font-weight: 700;
+              }
+            }
           }
         }
       }
     }
-  }
-  li {
-    a {
-      color: $white;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    &#social {
-      margin: 0 0 0 $global-margin;
+    li {
+      a {
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &#social {
+        margin: 0 0 0 $global-margin;
+      }
     }
   }
 }
