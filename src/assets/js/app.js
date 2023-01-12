@@ -59,3 +59,8 @@ $(window).scroll(function() {
 
 // END TOP-NAV-DESKTOP PLUGIN
 // ----------------------
+
+// offset height
+$(window).resize(function() {
+  $(document.body).css("margin-top", $("header.sticky").height());
+}).resize();

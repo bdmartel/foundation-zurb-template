@@ -1,20 +1,15 @@
-
-<header>
-  <div id="sticky">
-    <nav class="hidden">
-      <div class="top-bar">
-        <div class="top-bar-left">
-          <ul class="menu align-middle">
-            {{> logo}} 
-          </ul>
-        </div>
-        <div class="top-bar-right"> 
-          <ul class="menu">
-            {{> nav}}
-            {{> social}}
-          </ul>
-        </div>
+<header class="sticky fixed">
+  <nav class="hidden">
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <!-- {{> logo}}  -->
       </div>
-    </nav>
-  </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          {{> nav}}
+          {{> social}}
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>

@@ -81,7 +81,7 @@ $dark-gray: #8a8a8a;
 $black: #0d0d0d;
 $white: #fefefe;
 $body-background: $black;
-$body-font-color: $white;
+$body-font-color: $black;
 $body-font-family: "Roboto", Helvetica, Arial, sans-serif;
 $body-safe-padding: false;
 $body-antialiased: true;
@@ -873,8 +873,9 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 1rem 1rem .8rem .5rem;
-$topbar-background: rgba($black, .8);
+$topbar-background: transparent;
 $topbar-submenu-background: $topbar-background;
+$topbar-submenu-background: inherit;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
