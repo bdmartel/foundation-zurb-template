@@ -1,15 +1,53 @@
 // dev
-.padding{
-  width:100%;
-  height:150px;
+.padding {
+  width: 100%;
+  height: 150px;
 }
 
 // backgrounds
-.grid-x {
-    background-color: $light-gray;
-    
-  h4 {
-    background-color: $primary-color;
-  }   
+
+h4 {
+  background-color: $light-gray;
+  background-color: $primary-color;
+  color: $white;
+  // width: calc(100% - #{map-get($grid-margin-gutters, $small)}
+  margin: map.get($grid-margin-gutters, "medium")
 }
 
+
+.grid-x {
+  background-color: $light-gray;
+
+}
+
+.date-block {
+  width: 600px;
+  .cal-block {
+    color: $white;
+    background-color: $black;
+    .L1 {
+      padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+      border-bottom: solid 2px;
+      h5 {
+        color: $white;
+        margin-bottom: 0;
+      }
+    }
+    .L2 {
+      padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+      h3 {
+        margin-bottom: 0;
+        color: $white;
+      }
+    }
+  } 
+
+  .info-block {
+    .R1 {
+    }
+    .R2 {
+    }
+    .R3 {
+    }
+  }
+}

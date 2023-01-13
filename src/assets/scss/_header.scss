@@ -63,7 +63,6 @@ header.sticky {
               opacity: 0;
             }
           }
-
           a {
             color: $white;
             text-transform: uppercase;
@@ -72,16 +71,17 @@ header.sticky {
         }
       }
     }
+    li {
+      a {
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &#social {
+        margin: 0 0 0 $global-margin;
+      }
+    }
   }
 }
 
-li {
-  a {
-    color: $white;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  &#social {
-    margin: 0 0 0 $global-margin;
-  }
-}
+
