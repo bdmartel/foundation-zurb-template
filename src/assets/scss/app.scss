@@ -65,7 +65,11 @@
 @include motion-ui-animations;
 
 
-
+@import 'components/prototyping';
+@import 'components/mixins';
+@import 'global/global';
 @import 'header';
+@import 'components/schedule';
+
 @import 'custom';
 // @import 'custom/scrollto';

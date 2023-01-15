@@ -1,0 +1,17 @@
+// colors
+h4 {
+    background-color: $light-gray;
+    background-color: $primary-color;
+    color: $white;
+  }
+  .grid-x {
+    background-color: $light-gray;
+  
+  }
+  h4 {
+    @include remove-margins("medium");
+    @include breakpoint(small only) {      
+      @include remove-margins("small");
+    }
+  }
+  
