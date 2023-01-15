@@ -10,9 +10,24 @@ h4 {
   background-color: $light-gray;
   background-color: $primary-color;
   color: $white;
-  // width: calc(100% - #{map-get($grid-margin-gutters, $small)}
-  margin: map.get($grid-margin-gutters, "medium")
 }
+
+$gutter-margins-medium: map-get($grid-margin-gutters, "medium" );
+$gutter-margins-medium-half: map-get($grid-margin-gutters, "medium" )*.5;
+$breakpoint-medium: map-get($breakpoints, "medium" )*.5;
+$gutter-margins-small: map-get($grid-margin-gutters, "medium" )*.5;
+$breakpoint-small: map-get($breakpoints, "medium" )*.5;
+
+// target the medium variable whithin the grid-margin-gutters expression and define it as it's own variable. 
+$gutter-margins-medium: map-get($grid-margin-gutters, "medium" );
+// divide the new $gutter-margins-medium variable in half.
+$gutter-margins-medium-half: $gutter-margins-medium*.5;
+// give the h4 a negative margin of that amount.
+h4 {
+  margin-left: -$gutter-margins-medium-half;
+}
+
+
 
 
 .grid-x {
