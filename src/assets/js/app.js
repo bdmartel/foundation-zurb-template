@@ -19,10 +19,8 @@ require('@fortawesome/fontawesome-free/js/fontawesome');
 require('@fortawesome/fontawesome-free/js/brands');
 
 // FONTSOURCE - integrated google fonts
-import "@fontsource/roboto"; // Weight 400.
+import "@fontsource/roboto/400.css"; // Weight 400.
 import "@fontsource/roboto/700.css"; // Weight 400.
-
-
 
 $(document).foundation();
 
