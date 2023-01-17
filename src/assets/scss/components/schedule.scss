@@ -40,32 +40,35 @@
           base size gutters
         )
       );
+      
       @include breakpoint(800px) { 
         @include xy-cell(
-        $size: 6,
-        $gutters: 0         
+          $size: 6,
+          $gutters: 0         
         );
       }
+      
       @include breakpoint(900px) {
         @include xy-cell($size: 5);
         $gutter-position: left right top bottom,
-
       }
+      
       @include breakpoint(xlarge) {
         @include xy-cell($size: 4.2);
       }
+      
       .date-block {
+        @include flex-grid-row(
+          $wrap: false
+        );
+
         @include breakpoint(800px) {
           font-size: rem-calc(16px, $global-font-size);
         }
         @include breakpoint(900px) {
           font-size: rem-calc(18px, $global-font-size);
         }
-
         font-size: rem-calc(18px, $global-font-size);
-        @include flex-grid-row(
-          $wrap: false
-        )
         .cal-block {
           border-radius: rem-calc(12px, $global-font-size);
           color: $white;
@@ -73,7 +76,6 @@
           .L1 {
             padding: 0.4rem 0.7rem 0.4rem 0.7rem;
             border-bottom: solid 2px;
-            // font-size: rem-calc(14px, $global-font-size);
             font-size: 0.875em;
             color: $white;
             margin-bottom: 0;
@@ -107,3 +109,4 @@
     }
   }
 }
+
