@@ -4,14 +4,13 @@ h4 {
     background-color: $primary-color;
     color: $white;
   }
-  .grid-x {
-    background-color: $light-gray;
+  .grid-x, .calendar {
   
   }
-  h4 {
-    @include remove-margins("medium");
-    @include breakpoint(small only) {      
-      @include remove-margins("small");
-    }
-  }
+  // h4 {
+  //   @include remove-margins("medium");
+  //   @include breakpoint(small only) {      
+  //     @include remove-margins("small");
+  //   }
+  // }
   

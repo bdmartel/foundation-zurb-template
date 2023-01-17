@@ -1,26 +1,26 @@
-<div class="grid-container">
-  <div class="grid-x grid-margin-x grid-mom">
-    <div class="cell small-12 auto primary">
+<div class="containerBen">
+  <div class="gridBen">
+    <div class="cellBen">
       <h4 class="text-center grid-margin-x-collapse">Show Schedule</h4>
     </div>
   </div>
-  <div class="grid-x grid-margin-x grid-padding-x grid-margin-y grid-padding-y">
+</div>
+<div class="cal-container">
+  <div class="calendar">
+    <!-- <div class="grid-x grid-margin-x grid-padding-x small-up-offset-2 small-up-2 align-center grid-margin-y grid-padding-y"> -->
     {{#each global.calendar-items}}
-    <div class="cell small-6">  
-      <div class="date-block flex-container">
+    <div class="cal-item">
+      <!-- <div class="cell">   -->
+      <div class="date-block">
         <div class="cal-block text-center">
           <div class="L1 p-3">
-            <h5>
-              {{L1}}
-            </h5>
+            {{L1}}
           </div>
           <div class="L2">
-            <h3>
-              {{L2}}
-            </h3>
+            {{L2}}
           </div>
         </div>
-        <div class="info-block">  
+        <div class="info-block">
           <div class="R1">
             {{R1}}
           </div>
@@ -37,16 +37,18 @@
           </div>
         </div>
       </div>
+      <!-- </div> -->
     </div>
     {{/each}}
-
-
-
-
-<div class="padding"></div>
-
-
   </div>
+</div>
+
+
+
+
+
+
+<!-- </div> -->
 </div>
 <!-- {{#each global.calendar-items}}
     <div class="grid-x grid-margin-x grid-mom date-block">
