@@ -1,0 +1,22 @@
+<div class="containerBen">
+  <div class="gridBen">
+    <div class="cellBen">
+      <h4 class="text-center grid-margin-x-collapse">Show Schedule (with helpers)</h4>
+    </div>
+  </div>
+</div>
+<div class="cal-container">
+  <div class="calendar">
+    <div class="cal-item">
+      {{#with (split calendar)}}
+      <h2>Odd items:</h2>
+      {{#each oddItems}}
+        <p>{{this.date}} {{this.time}}</p>
+      {{/each}}
+      <h2>Even items:</h2>
+      {{#each evenItems}}
+        <p>{{this.date}} {{this.time}}</p>
+      {{/each}}
+    {{/with}}
+    </div>
+  </div>
