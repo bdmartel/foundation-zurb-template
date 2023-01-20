@@ -8,7 +8,7 @@
 <div class="cal-container">
   <div class="calendar">
     {{#with (split schedule)}}
-    <div class="odd-items">
+    <div class="half-col">
       {{#each oddItems}}
       <div class="cal-item">
         <div class="date-block">
@@ -40,7 +40,7 @@
       </div>
       {{/each}}
     </div>
-    <div class="even-items">
+    <div class="half-col">
       {{#each evenItems}}
       <div class="cal-item">
         <div class="date-block">
