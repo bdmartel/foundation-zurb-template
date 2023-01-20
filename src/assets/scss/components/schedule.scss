@@ -28,34 +28,16 @@
   .calendar {
     background-color: $light-gray;
     @include xy-grid;
-    justify-content: space-evenly;
-
-    .cal-item {
+    .half-col{
       @include xy-cell(
-        $size: full,
+        $size: 50%,
         $gutters: $grid-margin-gutters,
         $gutter-type: padding,
         $gutter-position: left right top bottom,
         $output: (base size gutters)
       );
-      @include breakpoint(800px) { 
-        @include xy-cell-size(
-          $size: 6,
-        );
-        @include xy-cell-gutters(
-          $gutters: 0         
-        )
-      }
-      
-      // @include breakpoint(900px) {
-      //   @include xy-cell($size: 5);
-      //   $gutter-position: left right top bottom,
-      // }
-      
-      // @include breakpoint(xlarge) {
-      //   @include xy-cell($size: 4.2);
-      // }
-      
+      .cal-item {
+
       .date-block {
         @include flex;
         // @include flex-align(right, bottom);
@@ -70,7 +52,7 @@
 
 
         .cal-block {
-          flex-basis: 140px;
+          width: 140px;
           height: 115px;
 
 
@@ -116,85 +98,6 @@
       }
     }
   }
+  }
 }
-
-
-// .cal-container {
-
-//   .calendar {
-
-//     .cal-item {
-      
-      
-      
-//       .date-block {
-
-//         font-size: rem-calc(18px, $global-font-size);
-
-//         .cal-block {
-//           border-radius: rem-calc(12px, $global-font-size);
-//           color: $white;
-//           background-color: $black;
-
-//           .L1 {
-//             padding: 0.4rem 0.7rem 0.4rem 0.7rem;
-//             border-bottom: solid 2px;
-//             font-size: 0.875em;
-//             color: $white;
-//             margin-bottom: 0;
-//           }
-//           .L2 {
-//             padding: 0.4rem 0.7rem 0.4rem 0.7rem;
-//             font-size: 2.188em;
-//             margin-bottom: 0;
-//             color: $white;
-//           }
-//         }
-//         .info-block {
-//           .R1 {
-//             font-size: 1em;
-//             color: $primary-color;
-//             margin-top: rem-calc(2px, $global-font-size);
-//           }
-//           .R2,
-//           .link {
-//             font-size: 0.875em;
-//           }
-//           .link {
-//             text-transform: uppercase;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-
-
-// // .cal-container {
-// //   @include xy-grid-container()  
-// //   .calendar {
-// //     @include xy-grid{
-// //     }
-// //     display:flex;
-
-// //     .cal-item {
-// //       @include xy-cell()
-// //       .date-block {
-
-// //         >*{
-
-// //         }
-
-// //         .cal-block {
-
-// //         }
-
-// //         .info-block {
-// //         }
-
-// //       }
-// //     }
-// //   }
-// // }
 
