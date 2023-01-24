@@ -1,16 +1,48 @@
 // colors
-h4 {
+.outer-container {
+  @include xy-grid-container(100%);
+
+  .outer-grid {
+    @include xy-grid();
     background-color: $light-gray;
-    background-color: $primary-color;
-    color: $white;
+
+    header {
+      background-color: $primary-color;
+      margin-bottom: $global-margin;
+
+      @include xy-cell(
+        $size: 100%,
+        $gutter-position: top bottom,
+        $gutter-type: padding,
+        $output: (
+          base size gutters
+        )
+      );
+      h2 {
+        color: $white;
+        margin-bottom: 0;
+      }
+    }
   }
-  .grid-x, .calendar {
-  
+}
+
+.flex {
+  &--block {
+    @include flex;
   }
-  // h4 {
-  //   @include remove-margins("medium");
-  //   @include breakpoint(small only) {      
-  //     @include remove-margins("small");
-  //   }
-  // }
-  
+}
+.title {
+  text-rendering: $header-text-rendering;
+}
+.outer-container {
+  .outer-grid {
+    .items-container {
+      @include xy-grid-container();
+      .items-grid {
+        @include xy-grid();
+        .item {
+        }
+      }
+    }
+  }
+}

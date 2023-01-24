@@ -19,10 +19,36 @@ require('@fortawesome/fontawesome-free/js/fontawesome');
 require('@fortawesome/fontawesome-free/js/brands');
 
 // FONTSOURCE - integrated google fonts
+import "@fontsource/roboto/300.css"; // Weight 300.
 import "@fontsource/roboto/400.css"; // Weight 400.
-import "@fontsource/roboto/700.css"; // Weight 400.
+import "@fontsource/roboto/700.css"; // Weight 700.
+
+Foundation.Orbit.defaults.animInFromRight = "fade-in";
+Foundation.Orbit.defaults.animOutToRight = "fade-out";
+Foundation.Orbit.defaults.animInFromLeft = "fade-in";
+Foundation.Orbit.defaults.animOutToLeft = "fade-out";
 
 $(document).foundation();
+
+
+// // Get the image element
+// var image = document.querySelector(".slideshow-wrapper .slideshow .orbit .orbit-wrapper .orbit-container li.orbit-slide.is-active img");
+
+// // Get the .orbit-container element
+// var orbitContainer = document.querySelector(".slideshow-wrapper .slideshow .orbit .orbit-wrapper .orbit-container");
+
+// // Function to set the height of the container
+// function setContainerHeight() {
+//   var imageHeight = image.clientHeight;
+//   orbitContainer.style.height = imageHeight + "px";
+// }
+
+// // Call the function on page load
+// setContainerHeight();
+
+// // Call the function on window resize
+// window.addEventListener("resize", setContainerHeight);
+
 
 
 // START TOP-NAV-DESKTOP PLUGIN
@@ -62,3 +88,8 @@ $(window).scroll(function() {
 $(window).resize(function() {
   $(document.body).css("margin-top", $("header.sticky").height());
 }).resize();
+
+
+
+
+

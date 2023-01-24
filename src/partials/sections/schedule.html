@@ -1,77 +1,32 @@
-<div class="containerBen">
-  <div class="gridBen">
-    <div class="cellBen">
-      <h4 class="text-center grid-margin-x-collapse">Show Schedule</h4>
+<div class="outer-container schedule">
+  <div class="outer-grid">
+    {{>h2-start}}{{ section-titles.schedule }}{{>h2-end}}
+    <div class="items-container">
+      <div class="items-grid">
+        {{#each schedule}}  
+        <div class="item">
+          <div class="flex--block">
+            <div class="flex--item cal">
+              <div class="L1 p-3">{{L1}}</div>
+              <div class="L2">{{L2}}</div>
+            </div>
+            <div class="flex--item info">
+              <div class="R1 title">
+                {{R1}}
+              </div>
+              <div class="R2">
+                {{R2}} {{#if R3}}
+                <span>&#x2022;<!--{{> clubs}}--></span> {{R3}}{{/if}}
+              </div>
+
+              {{#if link}}
+              <a class="link" href="{{link}}"> {{link_title}} </a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
     </div>
   </div>
 </div>
-<div class="cal-container">
-  <div class="calendar">
-    {{#with (split schedule)}}
-    <div class="half-col">
-      {{#each oddItems}}
-      <div class="cal-item">
-        <div class="date-block">
-          <div class="cal-block text-center">
-            <div class="L1 p-3">
-              {{L1}}
-            </div>
-            <div class="L2">
-              {{L2}}
-            </div>
-          </div>
-          <div class="info-block">
-            <div class="R1">
-              {{R1}}
-            </div>
-            <div class="R2">
-              {{R2}}
-            </div>
-            <div class="R2">
-              {{R3}}
-            </div>
-            <div class="link">
-              <a class="link" href="{{link}}">
-                {{link_title}}
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      {{/each}}
-    </div>
-    <div class="half-col">
-      {{#each evenItems}}
-      <div class="cal-item">
-        <div class="date-block">
-          <div class="cal-block text-center">
-            <div class="L1 p-3">
-              {{L1}}
-            </div>
-            <div class="L2">
-              {{L2}}
-            </div>
-          </div>
-          <div class="info-block">
-            <div class="R1">
-              {{R1}}
-            </div>
-            <div class="R2">
-              {{R2}}
-            </div>
-            <div class="R2">
-              {{R3}}
-            </div>
-            <div class="link">
-              <a class="link" href="{{link}}">
-                {{link_title}}
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      {{/each}}
-    </div>
-    {{/with}}
-
-  </div>

@@ -1,103 +1,87 @@
-.containerBen {
-  @include xy-grid-container;
+.outer-container.schedule {
+  .outer-grid {
+    .items-container {
+      @include xy-grid-container(60rem);
 
-  .gridBen {
-    @include xy-grid();
+      .items-grid {
+        @include xy-grid();
+        justify-content: space-evenly;
 
-    .cellBen {
-      background-color: $light-gray;
+        .item {
+          @include xy-cell(
+            $size: full,
+            $gutters: $grid-margin-gutters,
+            $gutter-position: top bottom,
+            $output: (
+              base size gutters
+            )
+          );
 
-      @include xy-cell(
-        $size: 100%,
-        $gutters: none,
-        $gutter-type: none,
-        $gutter-position: none,
-        $breakpoint: auto,
-        $output: (
-          size
-        )
-      );
-    }
-  }
-}
-
-
-.cal-container {
-  @include xy-grid-container;
-
-  .calendar {
-    background-color: $light-gray;
-    @include xy-grid;
-    .half-col{
-      @include xy-cell(
-        $size: 50%,
-        $gutters: $grid-margin-gutters,
-        $gutter-type: padding,
-        $gutter-position: left right top bottom,
-        $output: (base size gutters)
-      );
-      .cal-item {
-
-      .date-block {
-        @include flex;
-        // @include flex-align(right, bottom);
-
-        @include breakpoint(800px) {
-          font-size: rem-calc(16px, $global-font-size);
-        }
-        @include breakpoint(900px) {
-          font-size: rem-calc(18px, $global-font-size);
-        }
-        font-size: rem-calc(18px, $global-font-size);
-
-
-        .cal-block {
-          width: 140px;
-          height: 115px;
-
-
-          border-radius: rem-calc(12px, $global-font-size);
-          color: $white;
-          background-color: $black;
-          .L1 {
-            padding: 0.4rem 0.7rem 0.4rem 0.7rem;
-            border-bottom: solid 2px;
-            font-size: 0.875em;
-            color: $white;
-            margin-bottom: 0;
+          @include breakpoint(800px) {
+            @include xy-cell-size($size: 50%);
           }
-          .L2 {
-            padding: 0.4rem 0.7rem 0.4rem 0.7rem;
-            font-size: 2.188em;
-            margin-bottom: 0;
-            color: $white;
-          }
-        }
-        .info-block {
-          flex-grow: 0;
-          flex-shrink: 0;
-          flex-basis: auto;
 
-          margin-left: map-get($grid-margin-gutters, medium) / 2;
-          @include breakpoint(small only) {
-            margin-left: map-get($grid-margin-gutters, small) / 2;
-          }
-          .R1 {
-            font-size: 1em;
-            color: $primary-color;
-            margin-top: rem-calc(2px, $global-font-size);
-          }
-          .R2,
-          .link {
-            font-size: 0.875em;
-          }
-          .link {
-            text-transform: uppercase;
+          .flex--block {
+            // @include flex-align(right, bottom);
+            font-size: rem-calc(18px, $global-font-size);
+
+            @include breakpoint(800px) {
+              font-size: rem-calc(16px, $global-font-size);
+            }
+
+            @include breakpoint(1000px) {
+              font-size: rem-calc(19px, $global-font-size);
+            }
+
+            .flex--item {
+              &.cal {
+                border-radius: rem-calc(12px, $global-font-size);
+                color: $white;
+                background-color: $black;
+                min-width: 140px;
+                text-align: center;
+
+                .L1 {
+                  border-bottom: solid 2px;
+                  font-size: 0.875em;
+                  color: $white;
+                  padding-top: 0.3em;
+                  padding-bottom: 0.3em;
+                }
+
+                .L2 {
+                  font-size: 2.188em;
+                  padding: 0.1em 0.4em;
+                  color: $white;
+                }
+              }
+              &.info {
+                @include flex-align-self(middle);
+                margin-left: map-get($grid-margin-gutters, medium) / 2 - 5px;
+
+                @include breakpoint(small only) {
+                  margin-left: map-get($grid-margin-gutters, small) / 2;
+                }
+                .R1.title {
+                    font-size: 1.2em;
+                    color: $primary-color;
+                    line-height: 1.3;
+                }
+
+                .R2 {
+                  font-size: 0.74em;
+                  margin-bottom: -3px;
+                }
+
+                a {
+                  font-size: 0.74em;
+                  text-transform: uppercase;
+                }
+              }
+            }
           }
         }
       }
     }
   }
-  }
 }
-
