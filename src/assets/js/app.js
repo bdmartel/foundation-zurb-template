@@ -30,6 +30,24 @@ Foundation.Orbit.defaults.animOutToLeft = "fade-out";
 
 $(document).foundation();
 
+let orbitContainer = document.querySelectorAll(".flexbox-slide, .orbit-container");
+let orbitContainerHeight;
+
+// Get the current window height and divide by 4 * 3, set a maximum height of 600px
+function setHeight() {
+    orbitContainerHeight = (window.innerHeight / 4) * 3;
+    if (orbitContainerHeight > 600) {
+        orbitContainerHeight = 600;
+    }
+    for (let i = 0; i < orbitContainer.length; i++) {
+        orbitContainer[i].style.height = orbitContainerHeight + "px";
+    }
+}
+
+// Set the height on load and on resize
+window.addEventListener("load", setHeight);
+window.addEventListener("resize", setHeight);
+
 
 // // Get the image element
 // var image = document.querySelector(".slideshow-wrapper .slideshow .orbit .orbit-wrapper .orbit-container li.orbit-slide.is-active img");

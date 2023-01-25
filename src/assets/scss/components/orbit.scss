@@ -3,41 +3,219 @@
   padding: $global-padding;
   margin-left: auto;
   margin-right: auto;
+
   .slideshow {
+    font-family: "Futura Book";
+
     .orbit {
       .orbit-container {
-        // background-color: $light-gray;
         color: $white;
         .orbit-slide {
           height: inherit;
+          overflow: hidden;
+          &.multiple {
+            .flexbox-slide {
+              justify-content: initial;
+            }
+          }
+          .flexbox-slide {
+            display: flex;
+            justify-content: center;
+          }
+          img {
+            object-fit: cover;
+          }
           .text {
-            height: inherit;
-            @include flex;
             flex-direction: column;
+            height: inherit;
+            text-align: center;
+            @include flex;
             * {
-              border: dotted 1px;
               @include flex;
             }
+            .details {
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
             .lead {
-              font-size: rem-calc(50);
+            }
+          }
+          .text {
+            .details {
+              flex: 1;
+            }
+            .lead {
+              font-size: rem-calc(61);
               text-transform: uppercase;
-
               flex-grow: 2;
-              align-items: center; /* vertically centers the content */
-              justify-content: center; /* horizontally centers the content */
-              letter-spacing: 1px;
-              font-weight: 300;
+              align-items: center;
+              justify-content: center;
+              letter-spacing: rem-calc(5);
             }
             .details {
-              flex: 1; /* takes up the remaining 1/3 of the available height */
-              align-items: center; /* positions the content at the bottom */
-              justify-content: center; /* horizontally centers the content */
-              flex-direction: column;
-              .line-1{
-
+              .line-1 {
+                font-size: 125%;
               }
-              .line-2{
-
+              .line-2 {
+              }
+            }
+          }
+        }
+        &#faneuil-hall-boston {
+          .flexbox-slide {
+            .text {
+              .lead {
+              }
+              .details {
+              }
+              .line-1 {
+              }
+              .line-2 {
+              }
+            }
+            img {
+            }
+          }
+        }
+        &#knock-out {
+          .flexbox-slide {
+            .text {
+              .lead {
+              }
+              .details {
+              }
+              .line-1 {
+              }
+              .line-2 {
+              }
+            }
+            img {
+            }
+          }
+        }
+        &#vaudville {
+          .flexbox-slide {
+            .text {
+              .lead {
+              }
+              .details {
+              }
+              .line-1 {
+              }
+              .line-2 {
+              }
+            }
+            img {
+            }
+          }
+        }
+        &#bette-middler {
+          .flexbox-slide {
+            .text {
+              .lead {
+              }
+              .details {
+              }
+              .line-1 {
+              }
+              .line-2 {
+              }
+            }
+            img {
+            }
+          }
+        }
+        &#head-and-shoulders {
+          .flexbox-slide {
+            display: flex;
+            flex-direction: row;
+            img {
+              flex: 1;
+            }
+            .text {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              .lead {
+                flex: 0.8;
+              }
+              .details {
+                flex: 0.2;
+              }
+            }
+          }
+        }
+        &#never-fail {
+          .flexbox-slide {
+            flex-direction: row-reverse;
+            .text {
+              .lead {
+                font-size: rem-calc(34);
+                text-transform: none;
+                letter-spacing: rem-calc(1);
+              }
+            }
+          }
+        }
+        &#amazing-acrobats {
+          .flexbox-slide {
+            .text {
+              .lead {
+              }
+              .details {
+              }
+              .line-1 {
+              }
+              .line-2 {
+              }
+            }
+            img {
+            }
+          }
+        }
+        &#a-hit {
+          .flexbox-slide {
+            .text {
+              .lead {
+              }
+              .details {
+              }
+              .line-1 {
+              }
+              .line-2 {
+              }
+            }
+            img {
+            }
+          }
+        }
+        &#winner {
+          .flexbox-slide {
+            .text {
+              .lead {
+                font-size: rem-calc(30);
+                text-transform: none;
+                letter-spacing: rem-calc(1);
+              }
+            }
+          }
+        }
+        &#best-overall {
+          .flexbox-slide {
+            .text {
+              .lead {
+                font-size: rem-calc(30);
+                text-transform: none;
+                letter-spacing: rem-calc(1);
+              }
+            }
+          }
+        }
+        &#lean {
+          .flexbox-slide {
+            .text {
+              .lead {
               }
             }
           }
