@@ -48,6 +48,30 @@ function setHeight() {
 window.addEventListener("load", setHeight);
 window.addEventListener("resize", setHeight);
 
+// take into account mobile 
+
+// let orbitContainer = document.querySelectorAll(".flexbox-slide, .orbit-container");
+// let orbitContainerHeight;
+
+// function setHeight() {
+//     orbitContainerHeight = (window.innerHeight / 4) * 3;
+//     if (orbitContainerHeight > 600) {
+//         orbitContainerHeight = 600;
+//     }
+//     for (let i = 0; i < orbitContainer.length; i++) {
+//         orbitContainer[i].style.height = orbitContainerHeight + "px";
+//     }
+// }
+
+// function setMobileHeight() {
+//     orbitContainerHeight = (window.innerHeight * 0.8);
+//     for (let i = 0; i < orbitContainer.length; i++) {
+//         orbitContainer[i].classList.add("center-vertically");
+//         orbitContainer[i].style.height = orbitContainerHeight + "px";
+//     }
+// }
+
+
 
 // // Get the image element
 // var image = document.querySelector(".slideshow-wrapper .slideshow .orbit .orbit-wrapper .orbit-container li.orbit-slide.is-active img");

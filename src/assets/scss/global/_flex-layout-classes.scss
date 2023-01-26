@@ -1,0 +1,28 @@
+@mixin flex-item-width($value) {
+  flex: 0 0 $value;
+}
+.flex-30 {
+    @include flex-item-width(30%);
+  }
+  .flex-40 {
+    @include flex-item-width(40%);
+  }
+  .flex-50 {
+    @include flex-item-width(50%);
+  }
+  .flex-60 {
+    @include flex-item-width(60%);
+  }
+  .flex-70 {
+    @include flex-item-width(70%);
+  }
+  .flex-80 {
+    @include flex-item-width(80%);
+  }
+  .flex-90 {
+    @include flex-item-width(90%);
+  }
+  .flex-100 {
+    @include flex-item-width(100%);
+  }
+  

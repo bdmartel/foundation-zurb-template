@@ -63,14 +63,17 @@
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
-
-
-// @import 'components/prototyping';
-// @import 'components/mixins';
-@import 'global/global';
 // @import 'header';
-@import 'components/schedule';
-@import 'components/orbit';
+
+@import 'global/mixins';
+
+@import 'global/styles';
+@import 'global/flex-layout-classes';
+// @import 'global/typography';
+@import 'global/web-fonts';
+
+// @import 'sections/header';
+@import 'sections/schedule';
+@import 'sections/slideshow';
 
 
-@import 'fonts/fonts'

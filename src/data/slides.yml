@@ -1,10 +1,181 @@
--
- image: example.jpg
- text-1: 
- text-2:
- text-3:
- text-4:
--
- image: 
- text-1: A KNOCK OUT SHOW
- text-2: Andy Meldrum
+- id: 'faneuil-hall-boston'
+  text_width: 
+  image_width: '100'
+  image_filename: 'amazing-acrobats-faneuil-hall-boston2.jpg'
+  alt: 'general description goes here'
+  main_text: 
+  main_text_size: 
+  main_text_uppercase:
+  details:
+    - line_1: 
+    - line_2: 
+    - line_3: 
+  text_first:
+  
+- id: 'knock-out'
+  text_width: '100'
+  image_width: 
+  image_filename:
+  alt:
+  main_text: '&ldquo;A Knock-Out Show&rdquo;'
+  main_text_size: 'large'
+  main_text_uppercase: true
+  details:
+    - line_1: 'Andy Meldrum'
+    - line_2: 'Edinburgh Street Events Manager'
+  text_first:
+
+- id: 'vaudville'
+  text_width: 
+  image_width: '100'
+  image_filename: 'vaudville.jpg'
+  alt: 'general description of the image goes here'
+  main_text:
+  main_text_size:
+  main_text_uppercase:
+  details:
+    - line_1:
+    - line_2:
+    - line_3: 
+  text_first:
+
+- id: 'bette-middler'
+  text_width: '100'
+  image_width:
+  image_filename:
+  alt:
+  main_text: '&ldquo;The Bette Midler of Street Performers&rdquo;'
+  main_text_size: 'medium'
+  main_text_uppercase: true
+  details:
+    - line_1: 'West Hyler'
+    - line_2: 'Director: Air Play, Paramour, Georama and many more'
+    - line_3: 
+  text_first:
+
+- id: 'head-and-shoulders'
+  text_width: '40'
+  image_width: '60'
+  image_filename: 'edinburgh-fringe-festival-red-trouser-show.jpg'
+  alt: 'general description goes here'
+  main_text: '&ldquo;Head and shoulders above the crowd&rdquo;'
+  main_text_size: 'medium'
+  details:
+    - line_1: 'Machenzie Muldoon' 
+    - line_2: 'Marketing & Entertainment Director'
+    - line_3: 'Toronto Buskers Festival'
+  text_first: true
+
+- id: 'head-to-head'
+  text_width:
+  image_width: '100'
+  image_filename: 'circus-spectacle-danger-partner-acrobatics.jpg'
+  alt: 'general description goes here'
+  main_text:
+  main_text_size:
+  details:
+    - line_1:
+    - line_2:
+    - line_3:
+  text_first:
+
+- id: 'never-fail'
+  text_width: '70'
+  image_width: '30'
+  image_filename: 'head-and-shoulders-above-the-crowd.jpg'
+  alt: 'general description goes here'
+  main_text: '&ldquo;They never fail to exceed our expectations and the expectations of our wildly diverse audiences.&rdquo;'
+  main_text_size: 'small'
+  main_text_uppercase:
+  details:
+    - line_1: 'Jeff and Julie Jenkins'
+    - line_2: 'Midnight Circus Founders and Artistic Directors'
+    - line_3:
+  text_first:
+
+- id: 'amazing-acrobats'
+  text_width: '100'
+  image_width: 
+  image_filename:
+  alt: 
+  main_text: '&rdquo;AMAZING ACROBATS!&rdquo;'
+  main_text_size: 'large'
+  main_text_uppercase: true
+  details:
+    - line_1: 'ABC NEWS'
+    - line_2: 'Malaika Bova'
+    - line_3: 
+  text_first:
+
+- id: 'a-hit'
+  text_width: '30'
+  image_width: '70'
+  image_filename: garden-party-block-party-mallory-square.jpg
+  alt: 'general description goes here'
+  main_text: '&ldquo;The Show was definitely the &lsquo;hit&rsquo; of the 2011 Fair&rdquo;'
+  main_text_size: 'small'
+  main_text_uppercase:
+  details:
+    - line_1: 'Jeremy Parsons'
+    - line_2: 'Clay county Fair'
+    - line_3: 
+  text_first: true
+
+- id: 'winner'
+  text_width: '70'
+  image_width: '30'
+  image_filename: 'edinburgh-fringe-festival-funny-clubs.jpg'
+  alt: 'general description goes here'
+  main_text: '&ldquo;You will have a winner in your hands if you book The Red Trouser Show.&rdquo;'
+  main_text_size: 'medium'
+  main_text_uppercase:
+  details:
+    - line_1: Jeremy Parsons
+    - line_2: Clay County Fair Manager
+    - line_3: 
+  text_first: true
+
+- id: 'best-overall'
+  text_width: '50'
+  image_width: '50'
+  image_filename: 'state-fair-corporate-show.jpg'
+  alt: 'general description goes here'
+  main_text: '&ldquo;voted Best Overall Act in the festival&rdquo;'
+  main_text_size: 'medium'
+  main_text_uppercase:
+  details:
+    - line_1: 'Jan MacDonald'
+    - line_2: 'Kingston Buskers Rendezvous Coordinator'
+    - line_3: 
+  text_first:
+
+- id: 'lean'
+  text_width: 
+  image_width: '100'
+  image_filename: 'lean.jpg'
+  alt: 'general description goes here'
+  main_text: 
+  main_text_size: 
+  main_text_uppercase:
+  details:
+    - line_1: 
+    - line_2: 
+    - line_3: 
+  text_first:
+
+# - id: 
+#   text_width: 
+#   image_width: 
+#   image_filename:
+#   alt: 
+#   main_text: 
+#   main_text_size: 
+#   main_text_uppercase:
+#   details:
+#     - line_1: 
+#     - line_2: 
+#     - line_3: 
+#   text_first:
+
+# &ldquo;
+# &rdquo;

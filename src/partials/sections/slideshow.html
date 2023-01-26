@@ -1,27 +1,59 @@
 <div class="slideshow-wrapper">
   <div class="slideshow">
-    <div
-      class="orbit"
-      role="region"
-      data-auto-play="false"
-      aria-label="Slideshow"
-      data-orbit
-    >
+    <div class="orbit" style="border:solid 1px white" role="region" data-auto-play="false" aria-label="Slideshow"
+      data-orbit>
+      <div class="orbit-wrapper">
+        <ul class="orbit-container">
+          {{#each slides}}
+          <li class="orbit-slide {{#if image_width}}{{#if text_width}}multiple{{/if}}{{/if}}" id="{{id}}">
+            <div class="flexbox-slide" {{#if text_first}} style="flex-direction: row-reverse;"{{/if}}>
+              {{#if image_filename}}
+              <img src="{{root}}/assets/img/main-slideshow/{{image_filename}}" alt="{{alt}}"
+                class="orbit-image flex-{{image_width}}" />
+              {{/if}}
+              {{#if main_text}} 
+              <div class="text flex-{{text_width}}">
+                <div class="lead {{main_text_size}} {{#if main_text_uppercase}}uppercase{{/if}}">{{{main_text}}}</div>
+                {{#if details}}
+                <div class="details">
+                  {{#each details}}
+                  {{#each this}}
+                  <div class="{{@key}}">{{this}}</div>
+                  {{/each}}
+                  {{/each}}
+                </div>
+                {{/if}}
+
+              </div>
+              {{/if}}
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br><br><br>
+
+<div class="slideshow-wrapper">
+  <div class="slideshow">
+    <div class="orbit" role="region" data-auto-play="false" aria-label="Slideshow" data-orbit
+      style="border:solid 1px yellow">
       <div class="orbit-wrapper">
         <ul class="orbit-container">
           <li class="orbit-slide is-active" id="faneuil-hall-boston">
-            <div class="flex">
-              <img
-                src="{{root}}/assets/img/main-slideshow/amazing-acrobats-faneuil-hall-boston2.jpg"
-                alt="general description goes here"
-                class="orbit-image flex_100"
-              />
+            <div class="flexbox-slide">
+              <img src="{{root}}/assets/img/main-slideshow/amazing-acrobats-faneuil-hall-boston2.jpg"
+                alt="general description goes here" class="orbit-image flex-100" />
             </div>
           </li>
           <li class="orbit-slide" id="knock-out">
-            <div class="flex">
-              <div class="text flex_100">
-                <div class="lead large uppercase">&rdquo;A Knock-Out Show&ldquo;</div>
+            <div class="flexbox-slide">
+              <div class="text flex-100">
+                <div class="lead x_large uppercase">&rdquo;A Knock-Out Show&ldquo;</div>
                 <div class="details">
                   <div class="line-1">Andy Meldrum</div>
                   <div class="line-2">Edinburgh Street Events Manager</div>
@@ -30,17 +62,14 @@
             </div>
           </li>
           <li class="orbit-slide" id="vaudville">
-            <div class="flex">
-              <img
-                src="{{root}}/assets/img/main-slideshow/vaudville.jpg"
-                alt="general description goes here"
-                class="orbit-image flex_100"
-              />
+            <div class="flexbox-slide">
+              <img src="{{root}}/assets/img/main-slideshow/vaudville.jpg" alt="general description goes here"
+                class="orbit-image flex-100" />
             </div>
           </li>
           <li class="orbit-slide" id="bette-middler">
-            <div class="flex">
-              <div class="text flex_100">
+            <div class="flexbox-slide">
+              <div class="text flex-100">
                 <div class="lead large uppercase">"The Bette Midler of Street Performers"</div>
                 <div class="details">
                   <div class="line-1">West Hyler</div>
@@ -51,42 +80,32 @@
               </div>
             </div>
           </li>
-          <li class="orbit-slide multiple" id="head-and-shoulders">
-            <div class="flex">
-              <div class="text flex_40">
-                <div class="lead medium side-padding">"Head and shoulders above the crowd"</div>
+          <li class="orbit-slide" id="head-and-shoulders">
+            <div class="flexbox-slide">
+              <div class="text flex-40">
+                <div class="lead medium">"Head and shoulders above the crowd"</div>
                 <div class="details">
                   <div class="line-1">Machenzie Muldoon</div>
                   <div class="line-2">Marketing & Entertainment Director</div>
                   <div class="line-2">Toronto Buskers Festival</div>
                 </div>
               </div>
-              <img
-                src="{{root}}/assets/img/main-slideshow/edinburgh-fringe-festival-red-trouser-show.jpg"
-                alt="general description goes here"
-                class="orbit-image flex_60"
-
-              />
+              <img src="{{root}}/assets/img/main-slideshow/edinburgh-fringe-festival-red-trouser-show.jpg"
+                alt="general description goes here" class="orbit-image flex-60" />
             </div>
           </li>
           <li class="orbit-slide" id="head-to-head">
-            <div class="flex">
-              <img
-                src="{{root}}/assets/img/main-slideshow/circus-spectacle-danger-partner-acrobatics.jpg"
-                alt="general description goes here"
-                class="orbit-image flex_100"
-              />
+            <div class="flexbox-slide">
+              <img src="{{root}}/assets/img/main-slideshow/circus-spectacle-danger-partner-acrobatics.jpg"
+                alt="general description goes here" class="orbit-image flex-100" />
             </div>
           </li>
-          <li class="orbit-slide multiple" id="never-fail">
-            <div class="flex">
+          <li class="orbit-slide" id="never-fail">
+            <div class="flexbox-slide">
 
-              <img
-                src="{{root}}/assets/img/main-slideshow/head-and-shoulders-above-the-crowd.jpg"
-                alt="general description goes here"
-                class="orbit-image flex_30"
-              />
-              <div class="text flex_70">
+              <img src="{{root}}/assets/img/main-slideshow/head-and-shoulders-above-the-crowd.jpg"
+                alt="general description goes here" class="orbit-image flex-30" />
+              <div class="text flex-70">
                 <div class="lead small">
                   "They never fail to exceed our expectations and the expectations of our wildly diverse audiences."
                 </div>
@@ -100,8 +119,8 @@
             </div>
           </li>
           <li class="orbit-slide" id="amazing-acrobats">
-            <div class="flex">
-              <div class="text flex_100">
+            <div class="flexbox-slide">
+              <div class="text flex-100">
                 <div class="lead large uppercase">"AMAZING ACROBATS!"</div>
                 <div class="details">
                   <div class="line-1">ABC NEWS</div>
@@ -110,9 +129,9 @@
               </div>
             </div>
           </li>
-          <li class="orbit-slide multiple" id="a-hit">
-            <div class="flex">
-              <div class="text flex_30">
+          <li class="orbit-slide" id="a-hit">
+            <div class="flexbox-slide">
+              <div class="text flex-30">
                 <div class="lead small">
                   "The Show was definitely the 'hit' of the 2011 Fair"
                 </div>
@@ -121,17 +140,13 @@
                   <div class="line-2">Clay county Fair</div>
                 </div>
               </div>
-              <img
-                src="{{root}}/assets/img/main-slideshow/garden-party-block-party-mallory-square.jpg"
-                alt="general description goes here"
-                class="orbit-image flex_70"
-
-              />
+              <img src="{{root}}/assets/img/main-slideshow/garden-party-block-party-mallory-square.jpg"
+                alt="general description goes here" class="orbit-image flex-70" />
             </div>
           </li>
-          <li class="orbit-slide multiple" id="winner">
-            <div class="flex">
-              <div class="text flex_70">
+          <li class="orbit-slide" id="winner">
+            <div class="flexbox-slide">
+              <div class="text flex-70">
                 <div class="lead medium">
                   "You will have a winner in your hands if you book The Red
                   Trouser Show."
@@ -141,22 +156,16 @@
                   <div class="line-2">Clay County Fair Manager</div>
                 </div>
               </div>
-              <img
-                src="{{root}}/assets/img/main-slideshow/edinburgh-fringe-festival-funny-clubs.jpg"
-                alt="general description goes here"
-                class="orbit-image flex_30"
-              />
+              <img src="{{root}}/assets/img/main-slideshow/edinburgh-fringe-festival-funny-clubs.jpg"
+                alt="general description goes here" class="orbit-image flex-30" />
             </div>
           </li>
-          <li class="orbit-slide multiple is-active" id="best-overall">
-            <div class="flex">
-              <img
-                src="{{root}}/assets/img/main-slideshow/state-fair-corporate-show.jpg"
-                alt="general description goes here"
-                class="orbit-image flex_50"
-              />
-              <div class="text flex_50">
-                <div class="lead medium side-padding">
+          <li class="orbit-slide is-active" id="best-overall">
+            <div class="flexbox-slide">
+              <img src="{{root}}/assets/img/main-slideshow/state-fair-corporate-show.jpg"
+                alt="general description goes here" class="orbit-image flex-50" />
+              <div class="text flex-50">
+                <div class="lead medium x-padding-lg">
                   "voted Best Overall Act in the festival"
                 </div>
                 <div class="details">
@@ -169,12 +178,9 @@
             </div>
           </li>
           <li class="orbit-slide" id="lean">
-            <div class="flex">
-              <img
-                src="{{root}}/assets/img/main-slideshow/lean.jpg"
-                alt="general description goes here"
-                class="orbit-image flex_100"
-              />
+            <div class="flexbox-slide">
+              <img src="{{root}}/assets/img/main-slideshow/lean.jpg" alt="general description goes here"
+                class="orbit-image flex-100" />
             </div>
           </li>
         </ul>
