@@ -4,11 +4,12 @@
   margin-left: auto;
   margin-right: auto;
   .slideshow {
-    .orbit {
+    #rts-slideshow {
       .orbit-slide {
         height: inherit;
         overflow: hidden;
         .flexbox-slide {
+          height: inherit;
           .text,
           img {
             overflow: hidden;
@@ -20,6 +21,22 @@
             padding-left: $global-padding;
             padding-right: $global-padding;
             height: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .lead{
+              display: flex;
+            }
+            .details {
+              display: block;
+              position: absolute;
+              bottom: 0;
+              padding-bottom: 30px;
+              text-align: center;
+              * {
+                display: block;
+              }
+            }
           }
         }
       }

@@ -1,9 +1,9 @@
-@include breakpoint(medium) {
-  .lead {
-    flex-grow: 2;
-    align-items: center;
-  }
+
   @include breakpoint(medium) {
+    .lead {
+      flex-grow: 2;
+      align-items: center;
+    }
     .slideshow .lead {
       &.side-padding-sm {
         padding-left: rem-calc(120px);
@@ -15,5 +15,4 @@
         padding-right: rem-calc(120px);
       }
     }
-  }
 }

@@ -1,12 +1,12 @@
 <div class="slideshow-container">
   <div class="slideshow">
-    <div class="orbit" style="border:solid 1px white" role="region" data-auto-play="false" aria-label="Slideshow"
-      data-orbit>
+    <div class style="border:solid 1px white" role="region" data-auto-play="false" aria-label="Slideshow"
+      data-orbit id="rts-slideshow">
       <div class="orbit-wrapper">
         <ul class="orbit-container" style="height: 500px">
           {{#each slides}}
           <li
-            class="orbit-slide {{#if hide_mobile}}hide-mobile{{/if}} {{#if image_size}}{{#if text_size}}multiple{{/if}}{{/if}}"
+            class="orbit-slide {{#if make_two_slides_on_mobile}}separate-slides{{/if}}{{#if hide_mobile}}hide-mobile{{/if}} {{#if image_size}}{{#if text_size}}multiple{{/if}}{{/if}}"
             id="{{id}}">
             <div class="flexbox-slide {{#if text_first}}text-first{{/if}}">
               {{#if image_filename}}

@@ -115,6 +115,7 @@
     - line_1: Jeremy Parsons
     - line_2: Clay County Fair Manager
   text_first: true
+  make_two_slides_on_mobile: true
 
 - id: 'best-overall'
   text_size: '50'
