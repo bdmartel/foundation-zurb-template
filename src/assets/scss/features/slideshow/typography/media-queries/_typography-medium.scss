@@ -1,0 +1,49 @@
+@include breakpoint(medium) {
+    .slideshow .lead {
+
+      &.small {
+        font-size: rem-calc(30);
+        letter-spacing: rem-calc(1);
+      }
+
+      &.medium {
+        font-size: rem-calc(47);
+        letter-spacing: rem-calc(1);
+
+        &.uppercase {
+          letter-spacing: rem-calc(5);
+        }
+      }
+
+      &.large {
+        font-size: rem-calc(61);
+        letter-spacing: rem-calc(1);
+      }
+
+      &.side-padding-sm {
+        padding-left: rem-calc(120px);
+        padding-right: rem-calc(120px);
+      }
+
+      &.side-padding-lg {
+        padding-left: rem-calc(120px);
+        padding-right: rem-calc(120px);
+      }
+
+      &.small {
+        font-size: rem-calc(30);
+        letter-spacing: rem-calc(1);
+      }
+
+      &.medium {
+        font-size: rem-calc(47);
+        letter-spacing: rem-calc(1);
+
+        &.uppercase {
+          letter-spacing: rem-calc(5);
+        }
+      }
+    }
+  }
+
+  

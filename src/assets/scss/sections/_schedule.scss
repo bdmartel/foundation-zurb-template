@@ -2,7 +2,6 @@
   .outer-grid {
     .items-container {
       @include xy-grid-container(60rem);
-
       .items-grid {
         @include xy-grid();
         justify-content: space-evenly;

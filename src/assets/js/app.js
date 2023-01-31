@@ -14,39 +14,45 @@ require('foundation-sites');
 //import './lib/foundation-explicit-pieces';
 
 
-// FONTAWESOME - social icons
-require('@fortawesome/fontawesome-free/js/fontawesome');
-require('@fortawesome/fontawesome-free/js/brands');
+// // FONTAWESOME - social icons
+// require('@fortawesome/fontawesome-free/js/fontawesome');
+// require('@fortawesome/fontawesome-free/js/brands');
 
-// FONTSOURCE - integrated google fonts
-import "@fontsource/roboto/300.css"; // Weight 300.
-import "@fontsource/roboto/400.css"; // Weight 400.
-import "@fontsource/roboto/700.css"; // Weight 700.
+// // FONTSOURCE - integrated google fonts
+// import "@fontsource/roboto/300.css"; // Weight 300.
+// import "@fontsource/roboto/400.css"; // Weight 400.
+// import "@fontsource/roboto/700.css"; // Weight 700.
 
-Foundation.Orbit.defaults.animInFromRight = "fade-in";
-Foundation.Orbit.defaults.animOutToRight = "fade-out";
-Foundation.Orbit.defaults.animInFromLeft = "fade-in";
-Foundation.Orbit.defaults.animOutToLeft = "fade-out";
+// // Foundation.Orbit.defaults.animInFromRight = "fade-in";
+// // Foundation.Orbit.defaults.animOutToRight = "fade-out";
+// // Foundation.Orbit.defaults.animInFromLeft = "fade-in";
+// // Foundation.Orbit.defaults.animOutToLeft = "fade-out";
 
 $(document).foundation();
 
-let orbitContainer = document.querySelectorAll(".flexbox-slide, .orbit-container");
-let orbitContainerHeight;
+q
+// let orbitContainer = document.querySelectorAll(".flexbox-slide, .orbit-container");
+// let orbitContainerHeight;
 
-// Get the current window height and divide by 4 * 3, set a maximum height of 600px
-function setHeight() {
-    orbitContainerHeight = (window.innerHeight / 4) * 3;
-    if (orbitContainerHeight > 600) {
-        orbitContainerHeight = 600;
-    }
-    for (let i = 0; i < orbitContainer.length; i++) {
-        orbitContainer[i].style.height = orbitContainerHeight + "px";
-    }
-}
+// // Get the current window height and divide by 4 * 3, set a maximum height of 600px
+// function setHeight() {
+//     orbitContainerHeight = (window.innerHeight / 5) * 3;
+//     if (orbitContainerHeight > 600) {
+//         orbitContainerHeight = 600;
+//     }
+//     for (let i = 0; i < orbitContainer.length; i++) {
+//         orbitContainer[i].style.height = orbitContainerHeight + "px";
+//     }
+// }
 
-// Set the height on load and on resize
-window.addEventListener("load", setHeight);
-window.addEventListener("resize", setHeight);
+// // Set the height on load and on resize
+// window.addEventListener("load", setHeight);
+// window.addEventListener("resize", setHeight);
+
+
+
+
+
 
 // take into account mobile 
 
@@ -93,45 +99,64 @@ window.addEventListener("resize", setHeight);
 
 
 
-// START TOP-NAV-DESKTOP PLUGIN
-// ----------------------
+// // START TOP-NAV-DESKTOP PLUGIN
+// // ----------------------
 
-// Select the element that you want to listen for
-var element = $('header');
+// // Select the element that you want to listen for
+// var element = $('header');
 
-// Select the element that you want to add the class to
-var target = $('nav');
-var logo = $('nav #svg-contents');
+// // Select the element that you want to add the class to
+// var target = $('nav');
+// var logo = $('nav #svg-contents');
 
-$(window).scroll(function() {
-  // Get the distance from the top of the window to the element
-  var elementTop = element.offset().top;
-  // Get the height of the element
-  var elementHeight = element.height();
-  // Get the current scroll position of the window
-  var scrollTop = $(window).scrollTop();
+// $(window).scroll(function() {
+//   // Get the distance from the top of the window to the element
+//   var elementTop = element.offset().top;
+//   // Get the height of the element
+//   var elementHeight = element.height();
+//   // Get the current scroll position of the window
+//   var scrollTop = $(window).scrollTop();
 
-  // If the element is not visible (distance from top + height is less than scroll position), remove the class to the target element
-  if (elementTop + elementHeight < scrollTop) {
-    target.removeClass('hidden'),
-    logo.removeClass('animate-out').addClass('animate-in');
+//   // If the element is not visible (distance from top + height is less than scroll position), remove the class to the target element
+//   if (elementTop + elementHeight < scrollTop) {
+//     target.removeClass('hidden'),
+//     logo.removeClass('animate-out').addClass('animate-in');
 
-  } else {
-    // Otherwise, add the class from the target element
-    logo.removeClass('animate-in').addClass('animate-out'),
-    target.addClass('hidden');
-  }
-});
+//   } else {
+//     // Otherwise, add the class from the target element
+//     logo.removeClass('animate-in').addClass('animate-out'),
+//     target.addClass('hidden');
+//   }
+// });
+
+// add mobile class when mobile is in view
+
+// const slide = document.querySelector('.flexbox-slide');
+// const mobileWidth = 480;
+
+// function updateSlideClass() {
+//   if (window.innerWidth <= mobileWidth) {
+//     slide.classList.add('mobile');
+//     slide.classList.remove('desktop');
+//   } else {
+//     slide.classList.add('desktop');
+//     slide.classList.remove('mobile');
+//   }
+// }
+
+// window.addEventListener('resize', updateSlideClass);
+// updateSlideClass();
+
+
 
 // END TOP-NAV-DESKTOP PLUGIN
 // ----------------------
 
+
+
 // offset height
-$(window).resize(function() {
-  $(document.body).css("margin-top", $("header.sticky").height());
-}).resize();
-
-
-
+// $(window).resize(function() {
+//   $(document.body).css("margin-top", $("header.sticky").height());
+// }).resize();
 
 

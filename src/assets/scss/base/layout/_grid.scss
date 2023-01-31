@@ -1,0 +1,29 @@
+.outer-grid {
+  @include xy-grid();
+  background-color: $light-gray;
+
+  header {
+    background-color: $primary-color;
+    margin-bottom: $global-margin;
+
+    @include xy-cell(
+      $size: 100%,
+      $gutter-position: top bottom,
+      $gutter-type: padding,
+      $output: (
+        base size gutters
+      )
+    );
+    h2 {
+      color: $white;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.items-container {
+  @include xy-grid-container();
+}
+.items-grid {
+  @include xy-grid();
+}

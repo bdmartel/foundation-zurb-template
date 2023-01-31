@@ -1,20 +1,12 @@
 - id: 'faneuil-hall-boston'
-  text_width: 
-  image_width: '100'
+  text_size: 
+  image_size: '100'
   image_filename: 'amazing-acrobats-faneuil-hall-boston2.jpg'
   alt: 'general description goes here'
-  main_text: 
-  main_text_size: 
-  main_text_uppercase:
-  details:
-    - line_1: 
-    - line_2: 
-    - line_3: 
-  text_first:
-  
+
 - id: 'knock-out'
-  text_width: '100'
-  image_width: 
+  text_size: '100'
+  image_size: 
   image_filename:
   alt:
   main_text: '&ldquo;A Knock-Out Show&rdquo;'
@@ -26,22 +18,14 @@
   text_first:
 
 - id: 'vaudville'
-  text_width: 
-  image_width: '100'
+  image_size: '100'
   image_filename: 'vaudville.jpg'
   alt: 'general description of the image goes here'
-  main_text:
-  main_text_size:
-  main_text_uppercase:
-  details:
-    - line_1:
-    - line_2:
-    - line_3: 
-  text_first:
+  hide_mobile: true
 
 - id: 'bette-middler'
-  text_width: '100'
-  image_width:
+  text_size: '100'
+  image_size:
   image_filename:
   alt:
   main_text: '&ldquo;The Bette Midler of Street Performers&rdquo;'
@@ -50,25 +34,24 @@
   details:
     - line_1: 'West Hyler'
     - line_2: 'Director: Air Play, Paramour, Georama and many more'
-    - line_3: 
   text_first:
 
 - id: 'head-and-shoulders'
-  text_width: '40'
-  image_width: '60'
+  text_size: '40'
+  image_size: '60'
+  object_position_mobile: right
   image_filename: 'edinburgh-fringe-festival-red-trouser-show.jpg'
   alt: 'general description goes here'
   main_text: '&ldquo;Head and shoulders above the crowd&rdquo;'
   main_text_size: 'medium'
   details:
     - line_1: 'Machenzie Muldoon' 
-    - line_2: 'Marketing & Entertainment Director'
-    - line_3: 'Toronto Buskers Festival'
+    - line_2: 'Marketing & Entertainment Director | Toronto Buskers Festival'
   text_first: true
 
 - id: 'head-to-head'
-  text_width:
-  image_width: '100'
+  text_size:
+  image_size: '100'
   image_filename: 'circus-spectacle-danger-partner-acrobatics.jpg'
   alt: 'general description goes here'
   main_text:
@@ -76,12 +59,13 @@
   details:
     - line_1:
     - line_2:
-    - line_3:
   text_first:
 
 - id: 'never-fail'
-  text_width: '70'
-  image_width: '30'
+  text_size: '70'
+  image_size: '30'
+  text_size_mobile: '40'
+  image_size_mobile: '60'
   image_filename: 'head-and-shoulders-above-the-crowd.jpg'
   alt: 'general description goes here'
   main_text: '&ldquo;They never fail to exceed our expectations and the expectations of our wildly diverse audiences.&rdquo;'
@@ -90,12 +74,11 @@
   details:
     - line_1: 'Jeff and Julie Jenkins'
     - line_2: 'Midnight Circus Founders and Artistic Directors'
-    - line_3:
   text_first:
 
 - id: 'amazing-acrobats'
-  text_width: '100'
-  image_width: 
+  text_size: '100'
+  image_size: 
   image_filename:
   alt: 
   main_text: '&rdquo;AMAZING ACROBATS!&rdquo;'
@@ -104,12 +87,11 @@
   details:
     - line_1: 'ABC NEWS'
     - line_2: 'Malaika Bova'
-    - line_3: 
   text_first:
 
 - id: 'a-hit'
-  text_width: '30'
-  image_width: '70'
+  text_size: '30'
+  image_size: '70'
   image_filename: garden-party-block-party-mallory-square.jpg
   alt: 'general description goes here'
   main_text: '&ldquo;The Show was definitely the &lsquo;hit&rsquo; of the 2011 Fair&rdquo;'
@@ -118,12 +100,12 @@
   details:
     - line_1: 'Jeremy Parsons'
     - line_2: 'Clay county Fair'
-    - line_3: 
   text_first: true
-
+  move_mobile_image_left: true
+  
 - id: 'winner'
-  text_width: '70'
-  image_width: '30'
+  text_size: '70'
+  image_size: '30'
   image_filename: 'edinburgh-fringe-festival-funny-clubs.jpg'
   alt: 'general description goes here'
   main_text: '&ldquo;You will have a winner in your hands if you book The Red Trouser Show.&rdquo;'
@@ -132,12 +114,11 @@
   details:
     - line_1: Jeremy Parsons
     - line_2: Clay County Fair Manager
-    - line_3: 
   text_first: true
 
 - id: 'best-overall'
-  text_width: '50'
-  image_width: '50'
+  text_size: '50'
+  image_size: '50'
   image_filename: 'state-fair-corporate-show.jpg'
   alt: 'general description goes here'
   main_text: '&ldquo;voted Best Overall Act in the festival&rdquo;'
@@ -146,26 +127,17 @@
   details:
     - line_1: 'Jan MacDonald'
     - line_2: 'Kingston Buskers Rendezvous Coordinator'
-    - line_3: 
   text_first:
 
-- id: 'lean'
-  text_width: 
-  image_width: '100'
+- id: 'leab'
+  image_size: '100'
   image_filename: 'lean.jpg'
-  alt: 'general description goes here'
-  main_text: 
-  main_text_size: 
-  main_text_uppercase:
-  details:
-    - line_1: 
-    - line_2: 
-    - line_3: 
-  text_first:
+  alt: 'general description of the image goes here'
+  hide_mobile: true
 
 # - id: 
-#   text_width: 
-#   image_width: 
+#   text_size: 
+#   image_size: 
 #   image_filename:
 #   alt: 
 #   main_text: 
@@ -176,6 +148,8 @@
 #     - line_2: 
 #     - line_3: 
 #   text_first:
-
+# object_position_mobile: 
+# move_mobile_image_left:
+# move_mobile_image_right:
 # &ldquo;
 # &rdquo;

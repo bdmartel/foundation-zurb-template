@@ -1,0 +1,27 @@
+.slideshow-container {
+  .slideshow {
+    .orbit {
+      .orbit-slide {
+        .flexbox-slide {
+          .text,
+          img {
+            overflow: hidden;
+          }
+
+          img {
+            object-fit: cover;
+          }
+
+          .text {
+            padding-left: $global-padding;
+            padding-right: $global-padding;
+            height: inherit;
+
+            .details {
+            }
+          }
+        }
+      }
+    }
+  }
+}

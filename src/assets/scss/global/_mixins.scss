@@ -6,3 +6,8 @@
     margin-left: -(map-get($grid-margin-gutters, $gutter-size) * 0.5);
   }
 
+  @mixin mobile-only {
+    @media (max-width: $small-breakpoint) {
+      @content;
+    }
+  }

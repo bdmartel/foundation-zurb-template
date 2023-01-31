@@ -1,0 +1,42 @@
+@media only screen and (max-width: 640px) {
+  .text {
+    .lead {
+      &.small,
+      &.medium,
+      &.large {
+        // font-size: rem-calc(15);
+      }
+      &.medium {
+        font-size: rem-calc(26);
+      }
+    }
+    .details {
+      font-size: rem-calc(12);
+    }
+    &.flex-100 {
+      .lead {
+        &.large {
+          font-size: rem-calc(40);
+        }
+        &.medium {
+          font-size: rem-calc(26);
+          letter-spacing: rem-calc(4);
+        }
+      }
+    }
+  }
+  .orbit-slide.multiple {
+    .text {
+      .lead {
+        &.small,
+        &.medium,
+        &.large {
+          // font-size: rem-calc(15);
+        }
+      }
+      .details {
+        font-size: rem-calc(12);
+      }
+    }
+  }
+}

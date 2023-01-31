@@ -63,17 +63,28 @@
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
-// @import 'header';
 
-@import 'global/mixins';
+@import 'base/layout/_flexbox';
+@import 'base/layout/media-queries/_flexbox-small-only';
+@import 'base/layout/_grid';
+@import 'base/_colors';
+@import 'base/_fonts';
+@import 'base/_footer';
+@import 'base/_header';
+@import 'base/_typography';
 
-@import 'global/styles';
-@import 'global/flex-layout-classes';
-// @import 'global/typography';
-@import 'global/web-fonts';
+@import 'features/slideshow/layout/media-queries/_layout-medium';
+@import 'features/slideshow/layout/media-queries/_layout-small-only';
+@import 'features/slideshow/layout/_layout';
 
-// @import 'sections/header';
-@import 'sections/schedule';
-@import 'sections/slideshow';
+@import 'features/slideshow/typography/media-queries/_typography-medium';
+@import 'features/slideshow/typography/media-queries/_typography-small-only';
+@import 'features/slideshow/typography/_typography';
 
+@import 'features/slideshow/_slideshow';
 
+@import 'global/_mixins';
+
+@import 'sections/_schedule';
+
+@import 'utilities/wrapper/_wrapper';

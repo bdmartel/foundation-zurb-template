@@ -1,0 +1,16 @@
+.title {
+  text-rendering: $header-text-rendering;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.text {
+  word-break: break-word;
+  text-align: center;
+}
+.lead {
+  font-size: rem-calc(20);
+}
+.line_1 {
+  font-size: 125%;
+}
