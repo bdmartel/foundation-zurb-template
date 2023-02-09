@@ -6,7 +6,7 @@
 
 // Global styles
 @include foundation-global-styles;
-@include foundation-forms;
+// @include foundation-forms;
 @include foundation-typography;
 
 // Grids (choose one)
@@ -14,38 +14,38 @@
 // @include foundation-grid;
 // @include foundation-flex-grid;
 
-// Generic components
+// // Generic components
 @include foundation-button;
 @include foundation-button-group;
 @include foundation-close-button;
-@include foundation-label;
-@include foundation-progress-bar;
-@include foundation-slider;
-@include foundation-range-input;
-@include foundation-switch;
-@include foundation-table;
-// Basic components
-@include foundation-badge;
-@include foundation-breadcrumbs;
-@include foundation-callout;
-@include foundation-card;
-@include foundation-dropdown;
-@include foundation-pagination;
-@include foundation-tooltip;
+// @include foundation-label;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-range-input;
+// @include foundation-switch;
+// @include foundation-table;
+// // Basic components
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-callout;
+// @include foundation-card;
+// @include foundation-dropdown;
+// @include foundation-pagination;
+// @include foundation-tooltip;
 
 // Containers
-@include foundation-accordion;
-@include foundation-media-object;
+// @include foundation-accordion;
+// @include foundation-media-object;
 @include foundation-orbit;
 @include foundation-responsive-embed;
-@include foundation-tabs;
+// @include foundation-tabs;
 @include foundation-thumbnail;
-// Menu-based containers
+// // Menu-based containers
 @include foundation-menu;
-@include foundation-menu-icon;
-@include foundation-accordion-menu;
-@include foundation-drilldown-menu;
-@include foundation-dropdown-menu;
+// @include foundation-menu-icon;
+// @include foundation-accordion-menu;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown-menu;
 
 // Layout components
 @include foundation-off-canvas;
@@ -64,27 +64,35 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import 'base/layout/_flexbox';
-@import 'base/layout/media-queries/_flexbox-small-only';
-@import 'base/layout/_grid';
-@import 'base/_colors';
-@import 'base/_fonts';
-@import 'base/_footer';
-@import 'base/_header';
-@import 'base/_typography';
+@import 'global/mixins';
+@import 'global/variables';
 
-@import 'features/slideshow/layout/media-queries/_layout-medium';
-@import 'features/slideshow/layout/media-queries/_layout-small-only';
-@import 'features/slideshow/layout/_layout';
 
-@import 'features/slideshow/typography/media-queries/_typography-medium';
-@import 'features/slideshow/typography/media-queries/_typography-small-only';
-@import 'features/slideshow/typography/_typography';
+@import 'base/layout/flexbox';
+@import 'base/layout/media-queries/flexbox-small-only';
+@import 'base/layout/grid';
+@import 'base/colors';
+@import 'base/fonts';
+@import 'base/footer';
+@import 'base/header';
+@import 'base/nav';
+@import 'base/typography';
 
-@import 'features/slideshow/_slideshow';
+// @import 'features/loader/loader';
+@import 'features/loader/media-queries/loader-small-only';
+@import 'features/slideshow/layout/media-queries/layout-medium';
+@import 'features/slideshow/layout/media-queries/layout-small-only';
+@import 'features/slideshow/layout/layout';
 
-@import 'global/_mixins';
+@import 'features/slideshow/typography/media-queries/typography-medium';
+@import 'features/slideshow/typography/media-queries/typography-small-only';
+@import 'features/slideshow/typography/typography';
 
-@import 'sections/_schedule';
+@import 'features/slideshow/slideshow';
 
-@import 'utilities/wrapper/_wrapper';
+@import 'sections/schedule';
+
+@import 'utilities/wrapper/wrapper';
+
+
+

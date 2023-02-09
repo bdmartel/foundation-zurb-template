@@ -1,0 +1,15 @@
+<div class="grid-container fluid" id="photos" data-magellan-target="photos">
+  <div class="grid-x align-center bg">
+    <div class="cell">
+      {{>h2-start}}{{ section-titles.photos }}{{>h2-end}}
+    </div>
+    <div class="cell">
+
+      {{#each photos}}
+      <a href="#" class="thumbnail"><img src="{{root}}/assets/img/photos/thumbs/{{src}}" alt=""></a>
+      <li id="photoset_img_1"
+      {{/each}}
+
+    </div>
+  </div>
+</div>
