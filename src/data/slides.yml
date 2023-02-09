@@ -1,7 +1,7 @@
 - id: 'faneuil-hall-boston'
   text_size: 
   image_size: '100'
-  image_filename: 'amazing-acrobats-faneuil-hall-boston2.jpg'
+  image_filename: 'amazing-acrobats-faneuil-hall-boston.jpg'
   alt: 'general description goes here'
 
 - id: 'knock-out'

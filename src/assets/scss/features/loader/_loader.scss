@@ -1,0 +1,16 @@
+#loader {
+  .flex {
+    @include flex;
+    justify-content: center;
+    height: inherit;
+
+    .flex--block {
+        align-items: center;
+        flex: 0 0 10%;
+        justify-content: center;
+    }
+  }
+}
+svg#svg-contents {
+  fill:  $white;
+}

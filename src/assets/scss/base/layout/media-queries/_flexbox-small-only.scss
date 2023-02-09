@@ -2,7 +2,7 @@
   @mixin flex-item-size($value) {
     flex: 0 0 $value;
   }
-  .small-flex-30 {`
+  .small-flex-30 {
     @include flex-item-size(30%);
   }
   .small-flex-40 {

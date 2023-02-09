@@ -1,87 +1,19 @@
-/* is it working? */
-
-header.sticky {
-  position: fixed;
-  right: 0;
-  top: 0;
-  left: 0;
-  background-color: $black;
-  &.fixed {
-    animation: fadeIn 0.5s ease-in 1 forwards;
-  }
-  @keyframes fadeIn {
-    to {
-      background-color: rgba(17, 17, 17, 0.8);
-    }
-  }
-  .top-bar {
-    .top-bar-left {
-      #svg-contents {
-        .cls-1 {
-          fill: #ed2024;
-        }
-        .cls-2 {
+header {
+  &#branding {
+    background-color: transparent;
+    padding-top: 1rem;
+    .flex {
+      display: flex;
+      justify-content: center;
+      .flex--block {
+        width: 220px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: $primary-color;
+        svg#svg-contents {
           fill: $white;
         }
-
-        width: rem-calc(100);
-        &.animate-in {
-          $n: 15;
-          .sitem {
-            opacity: 0;
-            animation: fade-in 100ms ease forwards;
-            @for $x from 2 through $n {
-              &:nth-child(#{$x}) {
-                animation-delay: 50ms * ($x - 1);
-              }
-            }
-          }
-          @keyframes fade-in {
-            to {
-              opacity: 1;
-            }
-          }
-        }
-        &.animate-out {
-          $n: 15;
-          .sitem {
-            opacity: 1;
-            animation: fade-out 100ms ease forwards;
-            @for $x from 2 through $n {
-              &:nth-child(#{$x}) {
-                animation-delay: 50ms * ($x - 1);
-              }
-            }
-          }
-          @keyframes fade-in {
-            to {
-              opacity: 1;
-            }
-          }
-          @keyframes fade-out {
-            to {
-              opacity: 0;
-            }
-          }
-          a {
-            color: $white;
-            text-transform: uppercase;
-            font-weight: 700;
-          }
-        }
-      }
-    }
-    li {
-      a {
-        color: $white;
-        font-weight: 700;
-        text-transform: uppercase;
-      }
-      &#social {
-        margin: 0 0 0 $global-margin;
       }
     }
   }
 }
-
-

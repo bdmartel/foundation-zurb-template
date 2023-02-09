@@ -1,12 +1,16 @@
+.grid-container{
+  @include xy-gutters($gutter-position: top);
+.grid-x{
+
+}
+}
 .outer-grid {
   @include xy-grid();
-  background-color: $light-gray;
-
   header {
-    background-color: $primary-color;
-    margin-bottom: $global-margin;
-
-    @include xy-cell(
+  }
+}
+header{
+      @include xy-cell(
       $size: 100%,
       $gutter-position: top bottom,
       $gutter-type: padding,
@@ -14,11 +18,8 @@
         base size gutters
       )
     );
-    h2 {
-      color: $white;
-      margin-bottom: 0;
-    }
-  }
+      background-color: $primary-color;
+    margin-bottom: $global-margin;
 }
 
 .items-container {
@@ -26,4 +27,13 @@
 }
 .items-grid {
   @include xy-grid();
+}
+
+header{
+  background-color: $primary-color;
+  margin-bottom: $global-margin;
+      h2 {
+      color: $white;
+      margin-bottom: 0;
+    }
 }

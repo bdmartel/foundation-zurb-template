@@ -18,8 +18,26 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const uncss = require('postcss-uncss');
 
+let resizer = require('gulp-images-resizer');
+
+gulp.task('resize', function() {
+  return gulp.src('src/assets/img/photos/**/*')
+  .pipe(resizer({
+          format: "jpg",
+          width: 280,
+          height:180
+          // tinify: true,
+          // tinifyKey: "2v4Nkk4J1NVS0wxtdGhcsrZrNPGdyfgP"
+      }))
+  .pipe(gulp.dest('src/assets/img/photos/thumbs'));
+});
+
+
+
 // Load all Gulp plugins into one variable
 const $ = plugins();
+
+
 
 // Check for --production flag
 const PRODUCTION = !!(yargs.argv.production);
@@ -191,3 +209,4 @@ function watch() {
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
 }
+

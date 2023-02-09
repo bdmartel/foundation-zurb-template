@@ -1,5 +1,16 @@
-  <div class="grid-x offset" id="video">
-    <div class="large-12 cell">
-      <h2>Video</h2>
+<div class="grid-container fluid" id="video" data-magellan-target="video">
+  <div class="grid-x align-center bg">
+    <div class="cell">
+      {{>h2-start}}{{ section-titles.video }}{{>h2-end}}
+    </div>
+
+    <div class="cell medium-8 align-center">
+      <div class="responsive-embed widescreen">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Hy2V1AcO1LY" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
     </div>
   </div>
+</div>
