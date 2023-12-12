@@ -23,10 +23,13 @@ require("foundation-sites");
 Foundation.Orbit.defaults.animInFromRight = "fade-in";
 Foundation.Orbit.defaults.animOutToRight = "fade-out";
 Foundation.Orbit.defaults.animInFromLeft = "fade-in";
+
+// edit smooth scroll offset
 Foundation.Magellan.defaults.offset = "60";
+Foundation.Magellan.defaults.animationDuration = 350;
+Foundation.Magellan.defaults.easing = "linear";
 
-
-// Run through foundation componants
+// Run through foundation componants  
 $(document).foundation();
 
 import "/src/assets/js/building-blocks/tumblr.js";
