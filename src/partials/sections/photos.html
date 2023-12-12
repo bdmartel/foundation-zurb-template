@@ -1,4 +1,4 @@
-<div class="grid-container fluid" id="photos" data-magellan-target="photos">
+<!-- <div class="grid-container fluid" id="photos" data-magellan-target="photos">
   <div class="grid-x align-center bg">
     <div class="cell">
       {{>h2-start}}{{ section-titles.photos }}{{>h2-end}}
@@ -6,10 +6,200 @@
     <div class="cell">
 
       {{#each photos}}
-      <a href="#" class="thumbnail"><img src="{{root}}/assets/img/photos/thumbs/{{src}}" alt=""></a>
-      <li id="photoset_img_1"
+      <li id="photoset_img_1">
+        <a href="#" class="thumbnail">
+          <img src="{{root}}/assets/img/photos/thumbs/{{src}}" alt=""></a>
+      </li>
       {{/each}}
 
     </div>
   </div>
+</div> -->
+
+
+<div id="photos">
+  <div class="clearfix photos" id="page">
+    <ul>
+      <li id="photoset_img_1"><img src="img/photos/thumbs/acrobatic-juggling-scotland-best-street-show.jpg"
+          alt="acrobatic juggling scotland best-street show.jpg" width="" height="" /></li>
+      <li id="photoset_img_2"><img src="img/photos/thumbs/extreme-stunts-danger-trade-show-red-trouser.jpg"
+          alt="extreme stunts-danger-trade-show-red-trouser.jpg" width="" height="" /></li>
+      <li id="photoset_img_3"><img src="img/photos/thumbs/edinburgh-fringe-festival-red-trouser-show.jpg"
+          alt="edinburgh fringe festival red trouser show.jpg" width="" height="" /></li>
+      <li id="photoset_img_4"><img src="img/photos/thumbs/buskers-comedians-outdoor-performer-key-west.jpg"
+          alt="buskers comedians outdoor performer key west" width="" height="" /></li>
+      <!-- <li id="photoset_img_5"><img src="img/photos/thumbs/comedy-funny-acrobats.jpg" alt="comedy-funny-acrobats" width="" height="" /></li>-->
+      <li id="photoset_img_6"><img src="img/photos/thumbs/boston-performers-ladder-guys-iowa-state-fair.jpg"
+          alt="boston performers ladder guys iowa state fair.jpg" width="" height="" /></li>
+      <li id="photoset_img_7"><img src="img/photos/thumbs/fair-festival-entertainers-cirque.jpg"
+          alt="fair festival entertainers cirque" width="" height="" /></li>
+      <li id="photoset_img_8"><img src="img/photos/thumbs/fire-entertainers-juggler-circus-show.jpg"
+          alt="fire entertainers juggler circus show" width="" height="" /></li>
+      <li id="photoset_img_9"><img src="img/photos/thumbs/funny-impressive-skills-freaky.jpg"
+          alt="funny impressive skills freaky.jpg" width="" height="" /></li>
+      <li id="photoset_img_10"><img src="img/photos/thumbs/fire-fire-red-pants-flame.jpg"
+          alt="fire fire red pants flame.jpg" width="" height="" /></li>
+      <li id="photoset_img_11"><img src="img/photos/thumbs/klienesfest-germany-europe-artist-performance.jpg"
+          alt="klienesfest germany europe artist performance" width="" height="" /></li>
+      <!-- <li id="photoset_img_12"><img src="img/photos/thumbs/new-england-world-class-entertainment-top-notch.jpg" alt="new england world class entertainment top notch" width="" height="" /></li> -->
+      <li id="photoset_img_12"><img src="img/photos/thumbs/state-fair-corporate-show.jpg"
+          alt="state fair corporate show" width="" height="" /></li>
+      <li id="photoset_img_13"><img
+          src="img/photos/thumbs/affordable-corporate-entertainment-county-fair-festival.jpg"
+          alt="affordable corporate entertainment county fair festival" width="" height="" /></li>
+      <!-- <li id="photoset_img_15"><img src="img/photos/thumbs/best-australian-entertainment.jpg" alt="best australian entertainment" width="" height="" /></li> -->
+      <li id="photoset_img_14"><img src="img/photos/thumbs/Circus22.jpg" alt="Circus" width="" height="" />
+      </li>
+      <li id="photoset_img_15"><img src="img/photos/thumbs/Jump-through-Doublin.jpg"
+          alt="Jump-through-Doublin.jpg" width="" height="" /></li>
+      <li id="photoset_img_16"><img src="img/photos/thumbs/Vaudeville_10.27.18_Beana_2316.jpg"
+          alt="Vaudeville_10.27.18_Beana_2316.jpg" width="" height="" /></li>
+      <li id="photoset_img_17"><img src="img/photos/thumbs/Vaudeville_10.27.18_Beana_2251.jpg"
+          alt="Vaudeville_10.27.18_Beana_2251.jpg" width="" height="" /></li>
+    </ul>
+    <p class="clearfix">For more photos visit our <a target="_blank"
+        href="http://facebook.com/theredtrousershow">Facebook page</a></p>
+
+
+    <!--FOR EDITING FILENAME / ADDING NEW PHOTOS / CAPTIONS LOCATED HERE-->
+
+    <script type="text/javascript">
+
+      var photoset_data = [
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/acrobatic-juggling-scotland-best-street-show.jpg", "high_res": "img\/slideshow\/acrobatic-juggling-scotland-best-street-show.jpg", "caption": " " },
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/extreme-stunts-danger-trade-show-red-trouser.jpg", "high_res": "img\/slideshow\/extreme-stunts-danger-trade-show-red-trouser.jpg" },
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/edinburgh-fringe-festival-red-trouser-show.jpg", "high_res": "img\/photos\/edinburgh-fringe-festival-red-trouser-show.jpg" },
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/buskers-comedians-outdoor-performer-key-west.jpg", "high_res": "img\/photos\/buskers-comedians-outdoor-performer-key-west.jpg" },
+        // {"width":"1024","height":"680","low_res":"img\/photos\/comedy-funny-acrobats.jpg","high_res":"img\/photos\/comedy-funny-acrobats.jpg"},
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/boston-performers-ladder-guys-iowa-state-fair.jpg", "high_res": "img\/photos\/boston-performers-ladder-guys-iowa-state-fair.jpg" },
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/fair-festival-entertainers-cirque.jpg", "high_res": "img\/photos\/fair-festival-entertainers-cirque" },
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/fire-entertainers-juggler-circus-show.jpg", "high_res": "img\/photos\/fire-entertainers-juggler-circus-show.jpg" },
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/funny-impressive-skills-freaky.jpg", "high_res": "img\/photos\/funny-impressive-skills-freaky.jpg" },
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/fire-fire-red-pants-flame.jpg", "high_res": "img\/photos\/fire-fire-red-pants-flame.jpg" },
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/klienesfest-germany-europe-artist-performance.jpg", "high_res": "img\/photos\/klienesfest-germany-europe-artist-performance" },
+        // {"width":"1024","height":"680","low_res":"img\/photos\/new-england-world-class-entertainment-top-notch.jpg","high_res":"img\/photos\/new-england-world-class-entertainment-top-notch"},
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/state-fair-corporate-show.jpg", "high_res": "img\/photos\/state-fair-corporate-show" },
+        { "width": "1024", "height": "680", "low_res": "img\/photos\/affordable-corporate-entertainment-county-fair-festival.jpg", "high_res": "img\/photos\/affordable-corporate-entertainment-county-fair-festival.jpg" },
+        { "width": "2000", "height": "3000", "low_res": "img\/photos\/Circus22.jpg", "high_res": "img\/photos\/Circus22.jpg" },
+        { "width": "960", "height": "960", "low_res": "img\/photos\/Jump-through-Doublin.jpg", "high_res": "img\/photos\/Jump-through-Doublin.jpg" },
+        { "width": "3000", "height": "2000", "low_res": "img\/photos\/Vaudeville_10.27.18_Beana_2316.jpg", "high_res": "img\/photos\/Vaudeville_10.27.18_Beana_2316.jpg" },
+        { "width": "3000", "height": "2000", "low_res": "img\/photos\/Vaudeville_10.27.18_Beana_2251.jpg", "high_res": "img\/photos\/Vaudeville_10.27.18_Beana_2251.jpg" }
+
+      ];
+      function event_is_alt_key(e) {
+        return (
+          (!e && window.event && (window.event.metaKey || window.event.altKey)) ||
+          (e && (e.metaKey || e.altKey))
+        );
+      };
+      document.getElementById('photoset_img_1').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 1);
+        return false;
+      }
+      document.getElementById('photoset_img_2').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 2);
+        return false;
+      }
+      document.getElementById('photoset_img_3').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 3);
+        return false;
+      }
+      document.getElementById('photoset_img_4').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 4);
+        return false;
+      }
+      // document.getElementById('photoset_img_5').onclick = function(e)
+      // {   
+      // 	if (event_is_alt_key(e)) return true;
+      // 	window.parent.Util.Lightbox.init( photoset_data, 5 );
+      //     return false;
+      // }
+      document.getElementById('photoset_img_6').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 5);
+        return false;
+      }
+      document.getElementById('photoset_img_7').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 6);
+        return false;
+      }
+      document.getElementById('photoset_img_8').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 7);
+        return false;
+      }
+      document.getElementById('photoset_img_9').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 8);
+        return false;
+      }
+      document.getElementById('photoset_img_10').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 9);
+        return false;
+      }
+      document.getElementById('photoset_img_11').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 10);
+        return false;
+      }
+      // document.getElementById('photoset_img_12').onclick = function(e)
+      // {   
+      // 	if (event_is_alt_key(e)) return true;
+      // 	window.parent.Util.Lightbox.init( photoset_data, 12 );
+      //     return false;
+      // }
+      document.getElementById('photoset_img_12').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 11);
+        return false;
+      }
+      document.getElementById('photoset_img_13').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 12);
+        return false;
+      }
+      // document.getElementById('photoset_img_15').onclick = function(e)
+      // {   
+      // 	if (event_is_alt_key(e)) return true;
+      // 	window.parent.Util.Lightbox.init( photoset_data, 15 );
+      //     return false;
+      // }
+      document.getElementById('photoset_img_14').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 13);
+        return false;
+      }
+      document.getElementById('photoset_img_15').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 14);
+        return false;
+      }
+      document.getElementById('photoset_img_16').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 15);
+        return false;
+      }
+      document.getElementById('photoset_img_17').onclick = function (e) {
+        if (event_is_alt_key(e)) return true;
+        window.parent.Util.Lightbox.init(photoset_data, 16);
+        return false;
+      }
+
+    </script>
+
+  </div>
+</div>
+
+
+
+
+
+
+	</div>
 </div>

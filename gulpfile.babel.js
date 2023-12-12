@@ -32,6 +32,15 @@ gulp.task('resize', function() {
   .pipe(gulp.dest('src/assets/img/photos/thumbs'));
 });
 
+gulp.task('browser-sync', function() {
+  browser.init({
+      server: {
+          baseDir: "./src"
+      }
+  });
+
+  gulp.watch("src/pages/*.html").on('change', browser.reload);
+});
 
 
 // Load all Gulp plugins into one variable

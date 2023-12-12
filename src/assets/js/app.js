@@ -29,7 +29,7 @@ Foundation.Magellan.defaults.offset = "60";
 // Run through foundation componants
 $(document).foundation();
 
-
+import "/src/assets/js/building-blocks/tumblr.js";
 
 // CUSTOM JS // GLOBALS
 
@@ -192,7 +192,7 @@ window.addEventListener("load", () => {
   } else {
     // setSpacerHeight();
   }
-  initializeOrbit();
+  // initializeOrbit();
   
   // hideLoader()
 });

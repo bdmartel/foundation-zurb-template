@@ -1,9 +1,10 @@
 .bg{
   background-color: $light-gray;
 }
-header {
+header, th {
   background-color: $primary-color;
-  h2 {
+  color: $white;
+  td {
     color: $white;
   }
 }
